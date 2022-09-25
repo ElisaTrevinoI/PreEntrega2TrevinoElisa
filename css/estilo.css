@@ -19,6 +19,7 @@ body {
     min-height: 100vh;
 }
 
+
 /*
 nav ul li {
     list-style-type: none;
@@ -47,16 +48,43 @@ nav {
     margin-top: 20px;
 }
 
-.galeria-grid {
+.galeria {
     grid-area: galeria;
+    font-size: larger;
+}
+
+.textoInformativo {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.textoInformativo1 {
+    font-size: small;
+    text-align: center;
+}
+
+.textoInfEstambres {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    text-align: left;
 }
 
 footer {
     grid-area: footer;
-    margin-top: 20px;
+    margin-top: 5rem;
 }
 
-.envoltura {
+
+.encabezadoUno {
+    text-align: center;
+}
+
+.imgRedes {
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.grilla {
     display: grid;
     grid-template-areas:
         "header"
@@ -66,7 +94,7 @@ footer {
         "footer";
 }
 
-.padre {
+.videos {
     display: grid;
 
     grid-template-columns: 1fr;
@@ -75,12 +103,32 @@ footer {
     justify-items: center;
 }
 
+.imgEstambres {
+    display: grid;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 2px;
+    justify-items: center;
+}
+
+
+.carousel {
+    margin-left: 1rem;
+}
+
+
 .video {
     width: 200px;
     height: 215px;
-    margin-top: 15px;
+    /* margin-top: 1.5rem;*/
 }
 
+.estambre {
+    width: 150px;
+    height: 165px;
+    border-radius: 8px;
+}
 
 
 /*media query*/
@@ -88,7 +136,7 @@ footer {
 @media (min-width:320px) {
 
     /*reacomodamos el orden de la grilla*/
-    .envoltura {
+    .grilla {
         margin: 0;
         grid-template-columns: 1fr;
         grid-template-areas:
@@ -110,7 +158,25 @@ footer {
         height: 315px;
     }
 
+    .estambre {
+        width: 200px;
+        height: 215px;
+        border-radius: 8px;
+    }
 
+    .textoInformativo {
+        margin-top: 3rem;
+        text-align: center;
+    }
+
+    .textoInformativo1 {
+        font-size: small;
+        text-align: center;
+    }
+
+    .encabezadoUno {
+        text-align: center;
+    }
 }
 
 @media (min-width:768px) {
@@ -129,10 +195,10 @@ footer {
 
 
     nav {
-        margin-top: 3rem;
+        margin-top: 2rem;
     }
 
-    .envoltura {
+    .grilla {
         margin-bottom: 1.5em;
         grid-template-columns: 1fr 4fr 1fr;
         grid-template-areas:
@@ -143,15 +209,96 @@ footer {
             "footer footer footer";
     }
 
-    .padre {
+    .videos {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 15px;
-        margin: 3em;
+        /* margin: 3em;*/
+    }
+
+    .imgEstambres {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        gap: 2px;
+    }
+
+    .textoInformativo {
+        margin-top: 3rem;
+        text-align: left;
+    }
+
+    .textoInformativo1 {
+        font-size: small;
+        text-align: left;
+    }
+
+    .encabezadoUno {
+        text-align: left;
+    }
+
+    .estambre:hover {
+        animation: shake 0.5s;
+
+    }
+
+
+    @keyframes shake {
+        0% {
+            transform: translate(1px, 1px) rotate(0deg);
+        }
+
+        10% {
+            transform: translate(-1px, -2px) rotate(-1deg);
+        }
+
+        20% {
+            transform: translate(-3px, 0px) rotate(1deg);
+        }
+
+        30% {
+            transform: translate(3px, 2px) rotate(0deg);
+        }
+
+        40% {
+            transform: translate(1px, -1px) rotate(1deg);
+        }
+
+        50% {
+            transform: translate(-1px, 2px) rotate(-1deg);
+        }
+
+        60% {
+            transform: translate(-3px, 1px) rotate(0deg);
+        }
+
+        70% {
+            transform: translate(3px, 1px) rotate(-1deg);
+        }
+
+        80% {
+            transform: translate(-1px, -1px) rotate(1deg);
+        }
+
+        90% {
+            transform: translate(1px, 2px) rotate(0deg);
+        }
+
+        100% {
+            transform: translate(1px, -2px) rotate(-1deg);
+        }
     }
 
     footer {
-        margin-top: 1.5em;
+        margin-top: 5rem;
+    }
+
+    .imgRedes {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-top: 3rem;
+        margin-bottom: 1.5rem;
     }
 
 }
@@ -159,7 +306,7 @@ footer {
 /*
 @media(min-width:1024){
   
-.padre{
+.videos{
     padding: 1.5em;
 
 }
