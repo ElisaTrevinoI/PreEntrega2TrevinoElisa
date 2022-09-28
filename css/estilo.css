@@ -252,6 +252,11 @@ footer {
 
 @media (min-width:1024px) {
 
+    .encabezado1 {
+
+        font-size: 50px;
+    }
+
     .imgCarousel {
         display: block;
         margin-left: auto;
